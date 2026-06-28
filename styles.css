@@ -1210,6 +1210,61 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.375rem); }
     color: var(--accent-primary-light);
 }
 
+.timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
+}
+
+.timeline-card {
+    position: relative;
+    background: rgba(18, 23, 34, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-sm);
+    min-height: 210px;
+}
+
+.timeline-card::before {
+    content: '';
+    position: absolute;
+    top: var(--space-2xl);
+    left: var(--space-2xl);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+    box-shadow: 0 0 0 6px rgba(5, 183, 176, 0.08);
+}
+
+.timeline-card-accent {
+    border-color: rgba(5, 183, 176, 0.35);
+    background: rgba(5, 183, 176, 0.06);
+}
+
+.timeline-card h3 {
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-sm);
+}
+
+.timeline-date {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.timeline-note {
+    margin-top: var(--space-xl);
+    color: var(--text-muted);
+    text-align: center;
+    font-size: 0.95rem;
+}
+
 /* ============================================
    FOOTER
    ============================================ */
@@ -1269,6 +1324,10 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.375rem); }
         gap: var(--space-lg);
     }
 
+    .timeline-grid {
+        grid-template-columns: 1fr;
+    }
+
     .role-container {
         grid-template-columns: 1fr;
     }
@@ -1296,7 +1355,15 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.375rem); }
         grid-template-columns: 1fr;
     }
 
+    .timeline-grid {
+        grid-template-columns: 1fr;
+    }
+
     .contact-card {
+        padding: var(--space-xl);
+    }
+
+    .timeline-card {
         padding: var(--space-xl);
     }
 
