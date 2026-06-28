@@ -1073,7 +1073,7 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.375rem); }
 
 .form-card {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: var(--space-lg);
     padding: var(--space-lg) var(--space-xl);
     background: rgba(26, 31, 43, 0.6);
