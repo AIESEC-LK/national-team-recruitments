@@ -1173,13 +1173,17 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.375rem); }
     margin: 0 auto var(--space-lg);
     border-radius: 50%;
     background: rgba(255,255,255,0.08);
-    border: 1px dashed rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.18);
+    overflow: hidden;
     display: grid;
     place-items: center;
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+}
+
+.contact-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .contact-card h3 {
@@ -1260,6 +1264,11 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.375rem); }
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-lg);
+    }
+
     .role-container {
         grid-template-columns: 1fr;
     }
@@ -1283,6 +1292,28 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.375rem); }
 }
 
 @media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        padding: var(--space-xl);
+    }
+
+    .contact-card h3 {
+        font-size: 1rem;
+    }
+
+    .contact-card p,
+    .contact-link {
+        font-size: 0.95rem;
+    }
+
+    .contact-avatar {
+        width: 72px;
+        height: 72px;
+        margin-bottom: var(--space-md);
+    }
     .nav-toggle {
         display: flex;
     }
@@ -1378,6 +1409,15 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.375rem); }
 
     .role-card, .role-info-card {
         padding: var(--space-xl);
+    }
+
+    .contact-card {
+        padding: var(--space-lg);
+    }
+
+    .contact-avatar {
+        width: 64px;
+        height: 64px;
     }
 
     .page-hero {
